@@ -1,0 +1,22 @@
+<style>
+	.mytable{
+		border-spacing: 0.1rem;
+    	border-collapse: separate;
+	}
+</style>
+
+<div class="text-center mt-2">
+
+	<table class="mytable mx-auto">
+		<tr ng-repeat="row in rows">
+			<td ng-repeat="col in row"><img width="100px" height="100px" src="{{col.url}}" ng-click="click($parent.$index, $index)" /></td>
+		</tr>
+	</table>
+
+	<a class="btn btn-coral mt-2" ng-click="startGame()"><h1>START</h1></a>
+
+	<div ng-show="win" class="alert alert-success" role="alert">
+             YOU WIN!! 
+	</div>
+
+</div>
